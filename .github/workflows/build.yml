@@ -3,7 +3,7 @@ name: BUILD
 on:
   push:
   schedule:
-    - cron:  '1 */12 * * *'
+    - cron:  '1 */6 * * *'
 
 jobs:
   buildAUR:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-20.04
     
     steps:
-    - uses: soloturn/build-aur-action@master
+    - uses: Brx86/build-aur-action@master
       with:
         repo-name: ${{ matrix.repos }}
     
