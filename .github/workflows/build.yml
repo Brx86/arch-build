@@ -3,30 +3,23 @@ name: BUILD
 on:
   push:
   schedule:
-    - cron:  '1 */6 * * *'
+    - cron:  '1 */12 * * *'
 
 jobs:
   buildAUR:
     strategy:
       matrix:
-        repos: [dropbox, spotify, google-chrome, ttf-ms-fonts, yay, android-sdk, teamviewer, virtualbox-ext-oracle, android-sdk-platform-tools, package-query, tor-browser, aurvote-git, jre, jdk, google-earth-pro, visual-studio-code-bin, android-studio, minecraft-launcher, acroread, octopi, rar, telegram-desktop-bin, google-chrome-dev, android-udev-git, firefox-nightly, downgrade, nautilus-dropbox, alpm_octopi_utils, sublime-text2, ttf-google-fonts-git, plymouth, ncurses5-compat-libs, sublime-text-dev, slack-desktop, chromium-snapshot-bin, zuki-themes, aurvote, dropbox-cli, android-sdk-build-tools, octopi-dev, freetype2-infinality, freetype2-docs-infinality, freetype2-demos-infinality, wps-office-mime, wps-office, foxitreader, skypeforlinux-preview-bin, linux-ck-headers, linux-ck, zoom, ttf-vista-fonts, numix-icon-theme-git, chromium-widevine, oh-my-zsh-git, brave-bin, firefox-beta-bin, archey-git, hplip-plugin, jmtpfs, jdownloader2, purple-skypeweb-git, usb-creator, intellij-idea-ultimate-edition-jre, intellij-idea-ultimate-edition, jitsi, adobe-air, polybar, megasync, fontconfig-ubuntu, numix-circle-icon-theme-git, rslsync, google-chrome-beta, picom-git, nvidia-beta, pamac-aur, gtk-engine-equinox, opencl-nvidia-beta, nvidia-utils-beta, nvidia-settings-beta, thunar-dropbox, cairo-ubuntu, plex-media-server, firefox-kde-opensuse, ttf-mac-fonts, genymotion, zotero, i2p, rstudio-desktop-bin, fontconfig-infinality, mendeleydesktop-bundled, mendeleydesktop, fslint, trizen, aic94xx-firmware, skypeforlinux-stable-bin, xflux, insync, openssl098, grive, libreoffice-extension-languagetool, eagle, xfce-theme-greybird, lightdm-devel, liblightdm-qt5-devel, liblightdm-qt4-devel, xnviewmp, pkgbrowser, backintime-cli, backintime, android-ndk, makemkv, spideroak-one, gtk-engine-murrine-git, gcc-gcj-ecj, viber, sabnzbd, enemy-territory-data, enemy-territory, localepurge, gitkraken, komodo-edit, rxvt-unicode-patched, plymouth-git, grub2-theme-archlinux, downgrader-git, ungoogled-chromium, gnome-shell-extension-weather-git, paru, b43-firmware, ms-sys, gnome-colors-icon-theme, debtap, xboxdrv, yed, pycharm-professional, wd719x-firmware, x264-git, linux-mainline-headers, linux-mainline-docs, linux-mainline, arc-solid-gtk-theme-git, arc-gtk-theme-git, zfs-linux-headers, zfs-linux, balena-etcher, rarcrack, deb2targz, paman, modprobed-db, zramswap, powerpill, logmein-hamachi, icecat, fritzing, epsxe, android-apktool, tango-icon-theme, pikaur, chrome-gnome-shell-git, lib32-pangox-compat, neovim-git, paper-icon-theme-git, git-cola, cairo-dock-themes, awesome-git, xscreensaver-arch-logo, teams, python2-pyalsaaudio, python-pyalsaaudio, crossover, samsung-unified-driver-scanner, samsung-unified-driver-printer, samsung-unified-driver-common, samsung-unified-driver, aur-auto-vote-git, gnome-shell-extension-system-monitor-git, mpv-git, phpstorm-jre, phpstorm, lib32-gtk-engines, esound, python3-aur, gimp-plugin-resynthesizer-git, postman-bin, linux-pf-preset-default, linux-pf-headers, linux-pf, codecs64, lives, jabref, vlc-git, w_scan_cpp, ubuntu-themes, pipelight, aurman, pulseaudio-ctl, hal-info, font-manager, clion-lldb, clion-jre, clion-gdb, clion-cmake, clion, lib32-openssl098, command-not-found, urlview, pencil, palemoon-bin, terminus-font-ttf, nvm, menulibre, lighttable-bin, lib32-gdbm, timeshift, lib32-gtk-engine-murrine, imagewriter, aurutils, joplin-desktop, joplin, dockbarx, xen-docs, xen, pavumeter, pandoc-bin, alsi, vertex-themes, kalu, paper-gtk-theme-git, android-platform, yay-bin, xf86-video-ati-git, freenet, libpthread-stubs, linux-rt-headers, linux-rt-docs, linux-rt, laptop-mode-tools, mailspring, luckybackup, flashplayer-standalone, thinkfan, smartgit, scrcpy, preload, masterpdfeditor, archey3-git, webstorm-jre, webstorm, ntpdate, codelite]
+        repos: [deepin-wine5,deepin-wine5-i386,deepin-wine32-preloader,deepin-wine-helper,deepin-wine32,deepin-wine-qq,deepin-wine-tim,deepin-wine-wechat,deepin-wine-uninstaller,deepin-wine32-tools,deepin-wine5-stable,deepin-wine-plugin,com.qq.tim.spark,com.qq.weixin.spark,wine-tim,com.qq.weixin.deepin,com.qq.weixin.work.deepin,deepin.com.qq.im.light,com.qq.im.deepin,deepin-wine6-stable,deepin-wine-helper-full,com.qq.office.deepin,com.qq.im.deepin,deepin-tim-for-arch,deepin.com.qq.office,electron-qq,flashplugin,freechat-uos,motrix,optimus-manager-qt,ttf-ms-fonts,ttf-ms-win10-zh_cn,ttf-ms-win10-2019ltsc,com.pscs6.deepin,lx-music-desktop-bin,pdfsam,wps-office-cn,wps-office-mime-cn,wps-office-mui-zh-cn,wps-office,wps-office-mime,com.caustic3.deepin,ez-daily,qq2mp,pixiv-dl,pplink-bin,stickempires,octopi,octopi-dev,zoom,paru-bin,discord_arch_electron,todesk-bin,microsoft-edge-dev-bin,7-zip,balena-etcher,microsoft-edge-beta-bin,debtap,etcher-bin,notion-app,ncurses5-compat-libs,woeusb,zy-player-appimage,arduino-beta-bin,python-requests-html]
 
       fail-fast: false
       
     runs-on: ubuntu-20.04
     
     steps:
-    - uses: zjuyk/build-aur-action@master
+    - uses: DuckSoft/build-aur-action@master 
       with:
         repo-name: ${{ matrix.repos }}
     
-    - uses: ncipollo/release-action@v1
-      with:
-        allowUpdates: true
-        tag: "aur"
-        artifacts: "./*/*.xz"
-        token: ${{ secrets.GITHUB_TOKEN }}
-        
     - uses: ncipollo/release-action@v1
       with:
         allowUpdates: true
@@ -37,7 +30,7 @@ jobs:
   buildNonAUR:
     strategy:
       matrix:
-        PKGBUILDs: [rdm, breeze10]
+        PKGBUILDs: []
 
       fail-fast: false
       
