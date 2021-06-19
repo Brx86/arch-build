@@ -30,7 +30,7 @@ jobs:
   buildNonAUR:
     strategy:
       matrix:
-        PKGBUILDs: [qcef,netease-cloud-music]
+        PKGBUILDs: [ttf-hymmnos-ar]
 
       fail-fast: false
       
