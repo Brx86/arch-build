@@ -30,7 +30,7 @@ jobs:
   buildNonAUR:
     strategy:
       matrix:
-        PKGBUILDs: []
+        PKGBUILDs: [qcef,netease-cloud-music]
 
       fail-fast: false
       
