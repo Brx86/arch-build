@@ -9,7 +9,7 @@ jobs:
   buildAUR:
     strategy:
       matrix:
-        repos: [osu-lazer, mpv-mpris, weechat-notify-send, fpp, anbox-image-gapps, redsocks, drill, k6]
+        repos: [wps-office, wps-office-mime, wps-office-mui-zh-cn, freechat-uos, electron-qq]
 
       fail-fast: false
       
