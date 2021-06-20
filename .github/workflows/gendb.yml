@@ -14,5 +14,5 @@ jobs:
       with:
         allowUpdates: true
         tag: "x86_64"
-        artifacts: "./aya/*.db"
+        artifacts: "./aya.*"
         token: ${{ secrets.GITHUB_TOKEN }}
