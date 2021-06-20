@@ -7,8 +7,8 @@ jobs:
     
     - uses: Brx86/build-aur-action@master
       with:
-        repo-name: com.caustic3.deepin
-
+        repo-name: deepin-wine5-stable
+        
     - uses: ncipollo/release-action@v1
       with:
         allowUpdates: true
