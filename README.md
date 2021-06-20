@@ -7,6 +7,7 @@ Aya的个人源
 ```bash
 [aya]
 SigLevel = Never
+Server = https://hub.fastgit.org/Brx86/repo/releases/download/x86_64
 Server = https://github.com/Brx86/repo/releases/download/x86_64
 ```
 
