@@ -20,7 +20,7 @@ jobs:
       with:
         repo-name: ${{ matrix.repos }}
     
-    - uses: ncipollo/release-action@v1
+    - uses: ncipollo/release-action@1.6.1
       with:
         allowUpdates: true
         tag: "x86_64"
@@ -46,7 +46,7 @@ jobs:
           pkgdir: ${{ matrix.PKGBUILDs }}
           aurDeps: true
       
-      - uses: ncipollo/release-action@v1
+      - uses: ncipollo/release-action@1.6.1
         with:
           allowUpdates: true
           tag: "x86_64"
