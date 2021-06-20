@@ -16,7 +16,7 @@ jobs:
         artifacts: "./*/*.zst"
         token: ${{ secrets.GITHUB_TOKEN }}
 
-    - uses: Brx86/update-db-for-repo@single
+    - uses: Brx86/update-db-for-repo@master
       with:
         tag: x86_64
     - uses: ncipollo/release-action@v1
