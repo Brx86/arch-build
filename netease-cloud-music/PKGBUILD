@@ -8,7 +8,8 @@ pkgdesc="Netease Cloud Music, converted from .deb package"
 arch=("x86_64")
 url="http://music.163.com/"
 license=('custom')
-depends=('qcef' 'vlc')
+optdepends=('qcef')
+depends=('vlc')
 source=(
 	"http://d1.music.126.net/dmusic/netease-cloud-music_${pkgver}_amd64_ubuntu_${_pkgdate}.deb"
 	"http://music.163.com/html/web2/service.html"
