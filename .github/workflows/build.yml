@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-20.04
     
     steps:
-    - uses: Brx86/build-aur-action@master
+    - uses: Brx86/build-aur-action@dev
       with:
         repo-name: ${{ matrix.repos }}
     
@@ -30,7 +30,7 @@ jobs:
   buildNonAUR:
     strategy:
       matrix:
-        PKGBUILDs: [netease-cloud-music]
+        PKGBUILDs: [netease-cloud-music,qcef]
 
       fail-fast: false
       
