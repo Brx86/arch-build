@@ -1,0 +1,54 @@
+name: BUILD
+
+on:
+  push:
+  schedule:
+    - cron:  '1 */6 * * *'
+
+jobs:
+  buildAUR:
+    strategy:
+      matrix:
+        repos: [deepin-wine5,deepin-wine-helper,deepin-wine-qq,deepin-wine-tim,deepin-wine-wechat,deepin-wine5-stable,deepin-wine-plugin,com.qq.tim.spark,com.qq.weixin.spark,com.qq.weixin.deepin,com.qq.weixin.work.deepin,com.qq.im.deepin,deepin-wine6-stable,deepin-wine-helper-full,com.qq.office.deepin,com.qq.im.deepin,deepin.com.qq.office,electron-qq,flashplugin,freechat-uos,motrix,optimus-manager-qt,ttf-ms-fonts,ttf-ms-win10,com.pscs6.deepin,lx-music-desktop-bin,pdfsam,wps-office-cn,wps-office-mui,wps-office,com.caustic3.deepin,ez-daily,qq2mp,pixiv-dl,pplink-bin,stickempires,octopi,octopi-dev,zoom,paru-bin,discord_arch_electron,todesk-bin,microsoft-edge-dev-bin,7-zip,microsoft-edge-beta-bin,debtap,etcher-bin,ncurses5-compat-libs,woeusb,zy-player-appimage,arduino-beta-bin,python-requests-html]
+
+      fail-fast: false
+      
+    runs-on: ubuntu-20.04
+    
+    steps:
+    - uses: Brx86/build-aur-action@master
+      with:
+        repo-name: ${{ matrix.repos }}
+    
+    - uses: ncipollo/release-action@v1.6.1
+      with:
+        allowUpdates: true
+        tag: "x86_64"
+        artifacts: "./*/*.zst"
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+  buildNonAUR:
+    strategy:
+      matrix:
+        PKGBUILDs: [netease-cloud-music]
+
+      fail-fast: false
+      
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build Non-AUR packages
+        id: makepkg
+        uses: zjuyk/pkgbuild-action@master
+        with:
+          pkgdir: ${{ matrix.PKGBUILDs }}
+          aurDeps: true
+      
+      - uses: ncipollo/release-action@v1.6.1
+        with:
+          allowUpdates: true
+          tag: "x86_64"
+          artifacts: ${{ steps.makepkg.outputs.pkgfile0 }}
+          token: ${{ secrets.GITHUB_TOKEN }}
