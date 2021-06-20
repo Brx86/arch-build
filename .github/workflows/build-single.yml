@@ -1,33 +1,24 @@
 name: BUILD
-
 on: workflow_dispatch
-
 jobs:
-  buildAUR:
-    strategy:
-      matrix:
-        repos: [electron2,electron3-bin,electron5-bin,electron6-bin,electron7-bin,electron14-bin]
-
-      fail-fast: false
-      
-    runs-on: ubuntu-20.04
-    
+  build:
+    runs-on: ubuntu-latest
     steps:
+    
     - uses: Brx86/build-aur-action@master
       with:
-        repo-name: ${{ matrix.repos }}
-    
+        repo-name: com.caustic3.deepin
+        
     - uses: ncipollo/release-action@v1
       with:
         allowUpdates: true
         tag: "x86_64"
         artifacts: "./*/*.zst"
         token: ${{ secrets.GITHUB_TOKEN }}
-
   buildDB:
     runs-on: ubuntu-latest
     steps:
-    - uses: Brx86/update-db-for-repo@master
+    - uses: Brx86/update-db-for-repo@single
       with:
         tag: x86_64
     - uses: ncipollo/release-action@v1
