@@ -8,6 +8,7 @@ Aya的个人源
 [aya]
 SigLevel = Never
 Server = https://hub.fastgit.org/Brx86/repo/releases/download/x86_64
+Server = https://git.aya1.xyz/Brx86/repo/releases/download/x86_64
 Server = https://github.com/Brx86/repo/releases/download/x86_64
 ```
 
