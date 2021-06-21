@@ -9,7 +9,7 @@ jobs:
   buildAUR:
     strategy:
       matrix:
-        repos: [deepin-wine5,deepin-wine-helper,deepin-wine-qq,deepin-wine-tim,com.qq.tim.spark,com.qq.weixin.spark,com.qq.weixin.deepin,com.qq.weixin.work.deepin,com.qq.im.deepin,deepin-wine6-stable,com.qq.office.deepin,com.qq.im.deepin,electron-qq,flashplugin,freechat-uos,ttf-ms-fonts,com.pscs6.deepin,pdfsam,wps-office-cn,wps-office,com.caustic3.deepin,ez-daily,qq2mp,pixiv-dl,pplink-bin,stickempires,zoom,paru-bin,discord_arch_electron,todesk-bin,microsoft-edge-dev-bin,7-zip,microsoft-edge-beta-bin,debtap,etcher-bin,ncurses5-compat-libs,woeusb,zy-player-appimage,arduino-beta-bin,python-requests-html]
+        repos: [deepin-wine5,deepin-wine5-stable,deepin-wine-helper,deepin-wine-qq,deepin-wine-tim,com.qq.tim.spark,com.qq.weixin.spark,com.qq.weixin.deepin,com.qq.weixin.work.deepin,com.qq.im.deepin,deepin-wine6-stable,com.qq.office.deepin,com.qq.im.deepin,electron-qq,flashplugin,freechat-uos,ttf-ms-fonts,com.pscs6.deepin,pdfsam,wps-office-cn,wps-office,com.caustic3.deepin,ez-daily,qq2mp,pixiv-dl,pplink-bin,stickempires,zoom,paru-bin,discord_arch_electron,todesk-bin,microsoft-edge-dev-bin,7-zip,microsoft-edge-beta-bin,debtap,etcher-bin,ncurses5-compat-libs,woeusb,zy-player-appimage,arduino-beta-bin,python-requests-html]
 
       fail-fast: false
       
