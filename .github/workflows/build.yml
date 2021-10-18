@@ -26,29 +26,3 @@ jobs:
         tag: "x86_64"
         artifacts: "./*/*.pkg.tar.zst"
         token: ${{ secrets.GITHUB_TOKEN }}
-
-  buildNonAUR:
-    strategy:
-      matrix:
-        PKGBUILDs: []
-
-      fail-fast: false
-      
-    runs-on: ubuntu-20.04
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Build Non-AUR packages
-        id: makepkg
-        uses: zjuyk/pkgbuild-action@master
-        with:
-          pkgdir: ${{ matrix.PKGBUILDs }}
-          aurDeps: true
-      
-      - uses: ncipollo/release-action@v1
-        with:
-          allowUpdates: true
-          tag: "x86_64"
-          artifacts: ${{ steps.makepkg.outputs.pkgfile0 }}
-          token: ${{ secrets.GITHUB_TOKEN }}
