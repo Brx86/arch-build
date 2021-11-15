@@ -9,7 +9,7 @@ jobs:
   buildAUR:
     strategy:
       matrix:
-        repos: [flashplugin,freechat-git,pdfsam,wps-office-cn,wps-office,microsoft-edge-dev-bin,debtap,etcher-bin,woeusb,zy-player-appimage,python-requests-html,optimus-manager-qt,yozo-office,deepin-wine6-stable,dotnet-host-bin,dotnet-sdk-bin]
+        repos: [flashplugin,freechat-git,pdfsam,wps-office-cn,wps-office,microsoft-edge-dev-bin,debtap,etcher-bin,woeusb,zy-player-appimage,python-requests-html,optimus-manager-qt,yozo-office,dotnet-host-bin,dotnet-sdk-bin]
 
       fail-fast: false
       
