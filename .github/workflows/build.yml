@@ -9,7 +9,7 @@ jobs:
   buildAUR:
     strategy:
       matrix:
-        repos: [flashplugin,pdfsam,wps-office-cn,wps-office,microsoft-edge-dev-bin,debtap,zy-player-appimage,python-requests-html,optimus-manager-qt,yozo-office,visual-studio-code-bin]
+        repos: [flashplugin,pdfsam,microsoft-edge-dev-bin,debtap,zy-player-appimage,python-requests-html,optimus-manager-qt,yozo-office,visual-studio-code-bin,linux-tt,linux-tt-headers]
 
       fail-fast: false
       
