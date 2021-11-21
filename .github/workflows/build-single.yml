@@ -7,7 +7,7 @@ jobs:
     
     - uses: Brx86/build-aur-action@yay
       with:
-        repo-name: com.caustic3.deepin
+        repo-name: waifu2x-git
         
     - uses: ncipollo/release-action@v1
       with:
