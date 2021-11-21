@@ -7,7 +7,7 @@ jobs:
     
     - uses: Brx86/build-aur-action@yay
       with:
-        repo-name: realesrgan-ncnn-vulkan-bin
+        repo-name: quickgui
         
     - uses: ncipollo/release-action@v1
       with:
