@@ -15,6 +15,6 @@ Server = https://git.aya1.top/Brx86/repo/releases/download/x86_64
 然后运行
 
 ```bash
-sudo pacman -Syyy
+sudo pacman -Syy
 ```
 
