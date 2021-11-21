@@ -1,4 +1,4 @@
-    name: BUILD
+    name: BUILD-MAKEPKG
     on: workflow_dispatch
     jobs:
       build:
