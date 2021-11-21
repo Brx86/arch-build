@@ -9,7 +9,7 @@ jobs:
   buildAUR:
     strategy:
       matrix:
-        repos: [flashplugin,pdfsam,microsoft-edge-dev-bin,debtap,zy-player-appimage,python-requests-html,optimus-manager-qt,yozo-office,visual-studio-code-bin,linux-tt,linux-tt-headers]
+        repos: [flashplugin,pdfsam,microsoft-edge-dev-bin,debtap,zy-player-appimage,python-requests-html,optimus-manager-qt,yozo-office,visual-studio-code-bin,linux-tt,linux-tt-headers,srmd-ncnn-vulkan-bin,realesrgan-ncnn-vulkan-bin]
 
       fail-fast: false
       
