@@ -7,7 +7,7 @@ jobs:
     
     - uses: Brx86/build-aur-action@yay
       with:
-        repo-name: quickgui
+        repo-name: chromium
         
     - uses: ncipollo/release-action@v1
       with:
