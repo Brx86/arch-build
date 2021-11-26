@@ -7,7 +7,7 @@ jobs:
     
     - uses: Brx86/build-aur-action@yay
       with:
-        repo-name: chromium
+        repo-name: sysmontask
         
     - uses: ncipollo/release-action@v1
       with:
