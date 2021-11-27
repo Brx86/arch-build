@@ -2,7 +2,7 @@ jobs:
   buildAUR:
     runs-on: ubuntu-20.04
     steps:
-    - uses: Brx86/build-aur-action@yay-check
+    - uses: Brx86/build-aur-action@yay
       with:
         pkgname: ${{ matrix.repos }}
     - uses: ncipollo/release-action@v1
@@ -25,10 +25,10 @@ jobs:
         - realesrgan-ncnn-vulkan-bin
         - srmd-ncnn-vulkan-bin
         - sysmontask
-        - todesk-bin
         - visual-studio-code-bin
         - yozo-office
         - zy-player-appimage
+        - todesk-bin
 name: BUILD
 'on':
   schedule:
