@@ -18,7 +18,6 @@ jobs:
         - code-server
         - debtap
         - flashplugin
-        - gridea-bin
         - microsoft-edge-dev-bin
         - optimus-manager-qt
         - pdfsam
