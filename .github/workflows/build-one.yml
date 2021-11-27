@@ -4,7 +4,7 @@ jobs:
     steps:
     - uses: Brx86/build-aur-action@yay
       with:
-        pkgname: albert
+        pkgname: typora-free
     - uses: ncipollo/release-action@v1
       with:
         allowUpdates: true

@@ -30,6 +30,7 @@ jobs:
         - todesk-bin
         - brave-nightly-bin
         - albert
+        - typora-free
 name: BUILD
 'on':
   schedule:
