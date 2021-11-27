@@ -1,8 +1,8 @@
 git add .
-if [ -z "$1" ]
+if [ -z "$@" ]
 then
     git commit -m $(date +"%Y-%m-%d_%T")
 else
-    git commit -m $1
+    git commit -m $@
 fi
 git push
