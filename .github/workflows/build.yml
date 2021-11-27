@@ -29,6 +29,7 @@ jobs:
         - zy-player-appimage
         - todesk-bin
         - brave-nightly-bin
+        - albert
 name: BUILD
 'on':
   schedule:
