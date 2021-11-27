@@ -1,28 +1,36 @@
-name: BUILD
-
-on:
-  workflow_dispatch:
-  schedule:
-    - cron:  '1 */2 * * *'
-
 jobs:
   buildAUR:
-    strategy:
-      matrix:
-        repos: [code-server,debtap,flashplugin,gridea-bin,microsoft-edge-dev-bin,optimus-manager-qt,pdfsam,realesrgan-ncnn-vulkan-bin,srmd-ncnn-vulkan-bin,sysmontask,todesk-bin,visual-studio-code-bin,yozo-office,zy-player-appimage]
-
-      fail-fast: false
-      
     runs-on: ubuntu-20.04
-    
     steps:
     - uses: Brx86/build-aur-action@yay
       with:
         pkgname: ${{ matrix.repos }}
-    
     - uses: ncipollo/release-action@v1
       with:
         allowUpdates: true
-        tag: "x86_64"
-        artifacts: "./*/*.pkg.tar.zst"
+        artifacts: ./*/*.pkg.tar.zst
+        tag: x86_64
         token: ${{ secrets.GITHUB_TOKEN }}
+    strategy:
+      fail-fast: false
+      matrix:
+        repos:
+        - code-server
+        - debtap
+        - flashplugin
+        - gridea-bin
+        - microsoft-edge-dev-bin
+        - optimus-manager-qt
+        - pdfsam
+        - realesrgan-ncnn-vulkan-bin
+        - srmd-ncnn-vulkan-bin
+        - sysmontask
+        - todesk-bin
+        - visual-studio-code-bin
+        - yozo-office
+        - zy-player-appimage
+name: BUILD
+'on':
+  schedule:
+  - cron: 1 */2 * * *
+  workflow_dispatch: null
