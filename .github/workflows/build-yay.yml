@@ -1,3 +1,6 @@
+'on':
+  push: null
+  workflow_dispatch: null
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,6 +24,4 @@ jobs:
         tag: x86_64
         token: ${{ secrets.GITHUB_TOKEN }}
 name: BUILD-YAY
-'on':
-  push: null
-  workflow_dispatch: null
+
