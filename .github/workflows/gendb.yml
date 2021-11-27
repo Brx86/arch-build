@@ -2,7 +2,10 @@ name: GENDB
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '1 */1 * * *'
+    - cron:  '1 */24 * * *'
+  workflow_run:
+    workflows: ["BUILD-ONE","BUILD"]
+    types: [completed]
 jobs:
   build:
     runs-on: ubuntu-latest
