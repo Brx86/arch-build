@@ -23,5 +23,5 @@ jobs:
 name: BUILD-ONE
 'on':
   repository_dispatch:
-    types: build_one
+    types: build_one_hook
   workflow_dispatch: null
