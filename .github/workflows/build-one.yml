@@ -22,5 +22,6 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
 name: BUILD-ONE
 'on':
-  push: null
+  repository_dispatch:
+    types: build_one
   workflow_dispatch: null
