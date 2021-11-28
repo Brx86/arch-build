@@ -6,6 +6,8 @@ on:
   workflow_run:
     workflows: ["BUILD"]
     types: [completed]
+  repository_dispatch:
+    types: build_all_hook
 jobs:
   build:
     runs-on: ubuntu-latest
