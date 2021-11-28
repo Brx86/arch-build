@@ -33,6 +33,8 @@ jobs:
         - typora-free
 name: BUILD
 'on':
+  repository_dispatch:
+    types: build_all_hook
   schedule:
   - cron: 1 */2 * * *
   workflow_dispatch: null
