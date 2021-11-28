@@ -30,6 +30,7 @@ jobs:
         - todesk-bin
         - brave-nightly-bin
         - typora-free
+        - albert-bin
 name: BUILD
 'on':
   repository_dispatch:
