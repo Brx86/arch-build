@@ -29,7 +29,6 @@ jobs:
         - zy-player-appimage
         - todesk-bin
         - brave-nightly-bin
-        - typora-free
         - albert-bin
         - qrcp-bin
 name: BUILD
