@@ -28,7 +28,6 @@ jobs:
         - yozo-office
         - zy-player-appimage
         - todesk-bin
-        - brave-nightly-bin
         - albert-bin
         - qrcp-bin
 name: BUILD
