@@ -4,7 +4,7 @@ jobs:
     steps:
     - uses: Brx86/build-aur-action@yay
       with:
-        pkgname: qrcp-bin
+        pkgname: termius-app
     - uses: ncipollo/release-action@v1
       with:
         allowUpdates: true

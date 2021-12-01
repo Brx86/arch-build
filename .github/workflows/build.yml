@@ -30,6 +30,7 @@ jobs:
         - todesk-bin
         - albert-bin
         - qrcp-bin
+        - termius-app
 name: BUILD
 'on':
   repository_dispatch:
