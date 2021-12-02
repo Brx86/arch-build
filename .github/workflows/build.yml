@@ -32,7 +32,6 @@ jobs:
         - qrcp-bin
         - termius-app
         - deepin-wine5-stable
-        - l
 name: BUILD
 'on':
   repository_dispatch:
