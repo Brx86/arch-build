@@ -33,6 +33,7 @@ jobs:
         - termius-app
         - deepin-wine5-stable
         - nomachine
+        - rtl88x2bu-dkms-git
 name: BUILD
 'on':
   repository_dispatch:
