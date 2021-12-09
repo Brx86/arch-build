@@ -34,7 +34,6 @@ jobs:
         - deepin-wine5-stable
         - nomachine
         - rtl88x2bu-dkms-git
-        - rustdesk
 name: BUILD
 'on':
   repository_dispatch:
