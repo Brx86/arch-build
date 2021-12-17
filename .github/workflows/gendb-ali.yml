@@ -1,0 +1,10 @@
+name: Sync-aliyun
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Brx86/update-db-for-repo@ali
+      with:
+        tag: x86_64
