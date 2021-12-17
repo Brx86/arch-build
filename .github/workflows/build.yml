@@ -30,10 +30,8 @@ jobs:
         - todesk-bin
         - albert-bin
         - qrcp-bin
-        - termius-app
         - deepin-wine5-stable
         - nomachine
-        - rtl88x2bu-dkms-git
         - rm-improved
 name: BUILD
 'on':
