@@ -1,0 +1,14 @@
+name: Sync-aliyun
+on:
+  workflow_dispatch:
+  schedule:
+    - cron:  '1 */12 * * *'
+  repository_dispatch:
+    types: update_zhu
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: Brx86/update-db-for-repo@zhu
+      with:
+        tag: x86_64
