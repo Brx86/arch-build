@@ -1,4 +1,4 @@
-name: Sync-aliyun
+name: Sync-zhullyb
 on:
   workflow_dispatch:
   schedule:
