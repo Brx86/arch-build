@@ -1,8 +1,6 @@
 name: Sync-aliyun
 on:
   workflow_dispatch:
-  schedule:
-    - cron:  '1 */24 * * *'
   workflow_run:
     workflows: ["BUILD"]
     types: [completed]
