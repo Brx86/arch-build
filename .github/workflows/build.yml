@@ -15,24 +15,27 @@ jobs:
       fail-fast: false
       matrix:
         repos:
+        - albert-bin
         - code-server
         - debtap
+        - deepin-wine5-stable
         - flashplugin
+        - flashplayer-standalone
         - microsoft-edge-dev-bin
+        - nomachine
         - optimus-manager-qt
         - pdfsam
+        - python-conda
+        - python-conda-package-handling
+        - qrcp-bin
         - realesrgan-ncnn-vulkan-bin
+        - rm-improved
         - srmd-ncnn-vulkan-bin
         - sysmontask
+        - todesk-bin
         - visual-studio-code-bin
         - yozo-office
         - zy-player-appimage
-        - todesk-bin
-        - albert-bin
-        - qrcp-bin
-        - deepin-wine5-stable
-        - nomachine
-        - rm-improved
 name: BUILD
 'on':
   repository_dispatch:
