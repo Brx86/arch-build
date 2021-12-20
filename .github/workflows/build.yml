@@ -25,8 +25,6 @@ jobs:
         - nomachine
         - optimus-manager-qt
         - pdfsam
-        - python-conda
-        - python-conda-package-handling
         - qrcp-bin
         - realesrgan-ncnn-vulkan-bin
         - rm-improved
