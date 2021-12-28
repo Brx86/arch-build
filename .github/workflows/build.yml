@@ -32,6 +32,7 @@ jobs:
         - sysmontask
         - todesk-bin
         - visual-studio-code-bin
+        - wayfire-git
         - yozo-office
         - zy-player-appimage
 name: BUILD
