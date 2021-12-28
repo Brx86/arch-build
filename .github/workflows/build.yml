@@ -21,7 +21,6 @@ jobs:
         - deepin-wine5-stable
         - flashplugin
         - flashplayer-standalone
-        - microsoft-edge-dev-bin
         - nomachine
         - optimus-manager-qt
         - pdfsam
