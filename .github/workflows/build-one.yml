@@ -4,7 +4,7 @@ jobs:
     steps:
     - uses: Brx86/build-aur-action@yay
       with:
-        pkgname: gcc8 
+        pkgname: gcc9 
     - uses: ncipollo/release-action@v1
       with:
         allowUpdates: true
