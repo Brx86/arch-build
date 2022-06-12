@@ -4,7 +4,7 @@ jobs:
     steps:
     - uses: Brx86/build-aur-action@yay
       with:
-        pkgname: jre11-jetbrains-imfix 
+        pkgname: gcc8 
     - uses: ncipollo/release-action@v1
       with:
         allowUpdates: true
